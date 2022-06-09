@@ -1,7 +1,9 @@
 const albumContainer = document.querySelector('#album-container');
 const form = document.querySelector('form');
 
-const url = `http://localhost:9000/api/albums`;
+const url = `/api/albums`;
+
+// /api/albums
 
 const getAllAlbums = () => {
     axios
