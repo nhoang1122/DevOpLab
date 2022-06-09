@@ -19,6 +19,7 @@ module.exports = {
         res.status(200).send(albums);
     },
     createAlbum: (req,res) => {
+        rollbar.info("NEW MUSIC ALERT!! YEEE")
         let {title, artist, imageURL, ratings, faveTracks} = req.body;
         let newAlbum = {
             id:globalID,
