@@ -6,6 +6,8 @@ var rollbar = new Rollbar({
   captureUnhandledRejections: true
 });
 
+let globalID = 5;
+
 module.exports = {
     getAlbum: (req,res) => {
         res.status(200).send(albums);
@@ -15,5 +17,19 @@ module.exports = {
         let index = albums.findIndex((elem) => elem.id === +req.params.id)
         albums.splice(index,1);
         res.status(200).send(albums);
+    },
+    createAlbum: (req,res) => {
+        let {title, artist, imageURL, ratings, faveTracks} = req.body;
+        let newAlbum = {
+            id:globalID,
+            title: title,
+            artist: artist,
+            imageURL: imageURL,
+            ratings: ratings,
+            faveTracks: faveTracks
+        };
+        albums.push(newAlbum);
+        globalID++
+        res.status(200).send(albums)
     }
 }

@@ -48,6 +48,7 @@ button {
     height: 25px;
     border: none;
     margin: 5px;
+    border-radius: 30%;
 }
 
 input[type='text'] {

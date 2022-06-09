@@ -36,16 +36,16 @@ const submitHandler = (evt) => {
     let title = document.querySelector('#title')
     let artist = document.querySelector('#artist')
     let imageURL = document.querySelector('#img')
-    let faveTrack = document.querySelector('#fave-track')
+    let faveTracks = document.querySelector('#fave-track')
     
-    let rating = document.querySelector('input[name="ratings"]:checked')
+    let ratings = document.querySelector('input[name="ratings"]:checked')
     
     let bodyObj = {
         title : title.value,
         artist : artist.value,
         imageURL : imageURL.value,
-        faveTrack : faveTrack.value,
-        rating: rating.value
+        faveTracks : faveTracks.value,
+        ratings: ratings.value
     }
     
     createAlbum(bodyObj)
@@ -53,8 +53,8 @@ const submitHandler = (evt) => {
     title.value = ''
     artist.value = ''
     imageURL.value = ''
-    faveTrack.value = ''
-    rating.checked = false;
+    faveTracks.value = ''
+    ratings.checked = false;
     
 }
     
@@ -86,3 +86,4 @@ const displayAlbums = (arr) => {
 }
     
 getAllAlbums();
+form.addEventListener('submit', submitHandler)
