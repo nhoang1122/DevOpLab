@@ -1,9 +1,9 @@
 const albumContainer = document.querySelector('#album-container');
 const form = document.querySelector('form');
 
-const url = `/api/albums`;
-
-// /api/albums
+const url = `http://localhost:9000/api/albums`;
+//TO WORK ON HEROKU, DO NOT NEED LOCAL HOST//
+// const url = `/api/albums`;
 
 const getAllAlbums = () => {
     axios
