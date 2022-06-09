@@ -7,6 +7,7 @@ const controllerFile = require("./controller");
 
 app.use(express.json());
 app.use(cors());
+app.use(express.static('public'))
 
 var Rollbar = require("rollbar");
 var rollbar = new Rollbar({
@@ -23,7 +24,6 @@ app.delete("/api/albums/:id", controllerFile.deleteAlbum);
 app.post("/api/albums", controllerFile.createAlbum);
 
 
-app.use(express.static('public'))
 
 app.get('/', (req,res) => {
     res.sendFile(path.join(__dirname, '../public/index.html'))
