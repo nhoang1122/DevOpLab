@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>GOOD MUSIC</title>
+</head>
+
+<body>
+
+    <header>
+        <img src="./img/HeadPhone2.png">
+        <h1>GOOD MUSIC</h1>
+        <img src="./img/HeadPhone2.png">
+    </header>
+
+    <main>
+
+        <form>
+
+            <input type="text" id="title" placeholder="Insert Album Name">
+            <input type="text" id="artist" placeholder="Insert Artist Name">
+            <input type="text" id="img" placeholder="Insert Image URL">
+            <input type="text" id="fave-track" placeholder="Insert Favorite Track(s)">
+
+            <section id="ratings">
+                
+                <p id="rater">RATE THE ALBUM</p>
+
+                <div id="radio">
+
+                    <label for="one">
+                        
+                        <input type="radio" name="ratings" value="1" id="one"/> 1
+                    
+                    </label>
+
+                    <label for="two">
+
+                        <input type="radio" name="ratings" value="2" id="two"> 2
+
+                    </label>
+
+                    <label for="three">
+
+                        <input type="radio" name="ratings" value="3" id="three"> 3
+
+                    </label>
+
+                    <label for="four">
+
+                        <input type="radio" name="ratings" value="4" id="four"> 4
+
+                    </label>
+
+                    <label for="five">
+
+                        <input type="radio" name="ratings" value="5" id="five"> 5
+
+                    </label>
+
+                </div>
+
+            </section>
+
+            <button>ADD</button>
+
+        </form>
+
+        <section id="album-container"></section>
+
+    </main>
+    
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./main.js"></script>    
+</body>
+
+</html>
