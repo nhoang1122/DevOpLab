@@ -21,6 +21,15 @@ const createAlbum = (body) => {
     })
 }
 
+const deleteAlbum = id => {
+    axios
+    .delete(`${url}/${id}`)
+    .then(({ data: albums }) => displayAlbums(albums))
+    .catch((err) => {
+        console.log(err.response.data)
+    })
+}
+
 const submitHandler = (evt) => {
     evt.preventDefault()
     

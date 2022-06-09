@@ -18,8 +18,8 @@ var rollbar = new Rollbar({
 // record a generic message and send it to Rollbar
 rollbar.log("Hello world!");
 
-
 app.get("/api/albums", controllerFile.getAlbum)
+app.delete("/api/albums/:id", controllerFile.deleteAlbum);
 
 app.use(express.static('public'))
 
